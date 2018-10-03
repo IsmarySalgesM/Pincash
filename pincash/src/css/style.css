@@ -22,6 +22,18 @@ right:39%;
 color:#52584D;
 }
 
+.fa-file-invoice{
+position:relative;
+color :#52584D;
+margin-top: -4%;
+left:39%;
+}
+.reportar-texto{
+position:relative;
+color :#52584D;
+margin-bottom: 2%;
+left:39%;   
+}
 
 .fa-file-invoice:hover{
 color: #00A9A9;
@@ -38,29 +50,7 @@ color: #00A9A9;
 .showForm {
 display: block;
 }
-  
- 
-.overlay {
-height: 0;
-width: 100%;
-background-color: rgb(240, 233, 233);
-display: block;
-position: fixed;
-bottom: 0;
-left: 0;
-z-index: 99;
-overflow: hidden;
-margin: 0 auto;
-display: block;
-transition: all 0.5s ease-in-out;
-}
-.overlay.active {
-height: 100%;
-width: 100%;
-left: 0;
-overflow: auto;
-}
-  
+
 .slideUpForm {
 position: relative;
 width: 0px;
@@ -68,7 +58,7 @@ border-radius: 100%;
 width: 60px;
 opacity: 0;
 padding: 10vh 100px;
-background: #e9e5e5;
+background: #52584D;
 display: block;
 margin: 20vh auto;
 transition: all 0.75s ease;
@@ -85,7 +75,7 @@ border-radius: 0;
 width: 50%;
 margin: 0.5em;
 padding: 0.5em;
-border: solid 2px #dbdbdb;
+border: solid 2px #52584D;
 outline: none;
 }
 .prueba{
@@ -93,20 +83,24 @@ margin: 0.5em;
 padding: 0.5em;
 outline: none;
 }
-
-.slideUpForm .close {
+.close {
 position: absolute;
 right: 10%;
 top: 1em;
 font-size: 16px;
-color: #999;
-border: solid 2px #999;
 border-radius: 50%;
 padding: 5px 9px;
 }
- 
+.close:hover{
+color:#00A9A9;
+}
+
 /* Camara */
 #startbutton{
     position: relative;
     left: 37%;
+}
+.send{
+position: relative;
+left: 35%;   
 }
