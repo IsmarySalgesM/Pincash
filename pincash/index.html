@@ -6,26 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <!-- Ccs -->
     <link rel="stylesheet" href="/home/laboratoria/Pincash/pincash/src/css/style.css">
-    </head>
+</head>
 
 <body>
     <!-- Footer -->
     <div class="text-center">
-    <button type="button" class="btnFooter rounded-circle shadow p-3 mb-5 bg-white rounded border border-white"><i class="fas fa-location-arrow"></i></button>
-    <div class="footer">
+        <button type="button" class="btnFooter rounded-circle shadow p-3 mb-5 bg-white rounded border border-white"><i
+                class="fas fa-location-arrow"></i></button>
+        <div class="footer"></div>
+    </div>
+    <!-- Modal -->
+    <button class='showForm'>Reportar</button>
+    <div class='overlay'>
+        <form class='slideUpForm'>
+            <span class='close'>X</span>
+            <div class="row">
+                <div class="col">
+                    <h6 class="prueba text-center">Ayudanos a mejorar la experiencia de este cajero</h6>
+                </div>
+                <select class="custom-select prueba">
+                    <option selected>Reportar</option>
+                    <option value="1">Fuera de Servicio</option>
+                    <option value="2">Sin dinero</option>
+                    <option value="3">Cajero cerrado</option>
+                    <option value="4">No funciona el teclado</option>
+                    <option value="5">No ingresa tarjeta</option>
+                </select>
+                <h6>Otro reporte</h6>
+                <textarea class='message' placeholder='Your Message' rows='4'></textarea>
+                <input class='send' type='submit' value='Send'>
+        </form>
+    </div>
 
-    </div>
-    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="./src/js/js.js"></script>
 </body>
 
 </html>

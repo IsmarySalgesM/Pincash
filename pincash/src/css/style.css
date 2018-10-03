@@ -1,17 +1,92 @@
 /* Footer */
 .footer{
-    background-color: #F9F9F9;
-    height: 50px;
+background-color: #F9F9F9;
+height: 50px;
 }
 
 .btnFooter{
-    position: relative;
-    top: 70px;
-    background-color: white;
-    
-    
+position: relative;
+top: 70px;
+background-color: white;
+   
 }
 
 .fa-location-arrow{
-    color:#00A9A9;
+color:#00A9A9;
 }
+/* Modal */
+.showForm {
+background-color: #222;
+color: #efefef;
+display: block;
+border-radius: 5px;
+}
+  
+ 
+.overlay {
+height: 0;
+width: 100%;
+background-color: rgb(240, 233, 233);
+display: block;
+position: fixed;
+bottom: 0;
+left: 0;
+z-index: 99;
+overflow: hidden;
+margin: 0 auto;
+display: block;
+transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+height: 100%;
+width: 100%;
+left: 0;
+overflow: auto;
+}
+  
+.slideUpForm {
+position: relative;
+width: 0px;
+border-radius: 100%;
+width: 50px;
+opacity: 0;
+padding: 10vh 100px;
+background: #e9e5e5;
+display: block;
+margin: 20vh auto;
+transition: all 0.75s ease;
+z-index: 999;
+}
+.slideUpForm.active {
+width: 100%;
+height: auto;
+opacity: 0.9;
+top: 0;
+border-radius: 0;
+}
+.slideUpForm input,
+.slideUpForm textarea {
+width: 100%;
+margin: 0.5em;
+padding: 0.5em;
+border: solid 2px #dbdbdb;
+outline: none;
+}
+.prueba{
+margin: 0.5em;
+padding: 0.5em;
+outline: none;
+}
+
+.slideUpForm .close {
+position: absolute;
+right: 10%;
+top: 1em;
+font-size: 16px;
+color: #999;
+border: solid 2px #999;
+border-radius: 50%;
+padding: 5px 9px;
+}
+ 
+  
