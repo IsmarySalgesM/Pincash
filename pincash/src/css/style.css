@@ -10,16 +10,33 @@ top: 70px;
 background-color: white;
    
 }
-
 .fa-location-arrow{
-color:#00A9A9;
+position:relative;
+color :#52584D;
+right:39%;
 }
+.fa-location-arrow:hover { 
+    color: #00A9A9;
+}
+.fa-sync-alt{
+color:#52584D;
+}
+
+
+.fa-file-invoice:hover{
+color: #00A9A9;
+}
+.cajero-texto{
+position:relative;
+right:39%;
+}
+.fa-sync-alt:hover { 
+color: #00A9A9;
+}
+
 /* Modal */
 .showForm {
-background-color: #222;
-color: #efefef;
 display: block;
-border-radius: 5px;
 }
   
  
@@ -48,7 +65,7 @@ overflow: auto;
 position: relative;
 width: 0px;
 border-radius: 100%;
-width: 50px;
+width: 60px;
 opacity: 0;
 padding: 10vh 100px;
 background: #e9e5e5;
@@ -64,9 +81,8 @@ opacity: 0.9;
 top: 0;
 border-radius: 0;
 }
-.slideUpForm input,
-.slideUpForm textarea {
-width: 100%;
+.slideUpForm input,.slideUpForm textarea,.custom-select {
+width: 50%;
 margin: 0.5em;
 padding: 0.5em;
 border: solid 2px #dbdbdb;
@@ -89,4 +105,8 @@ border-radius: 50%;
 padding: 5px 9px;
 }
  
-  
+/* Camara */
+#startbutton{
+    position: relative;
+    left: 37%;
+}

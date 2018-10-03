@@ -20,21 +20,21 @@
     <!-- Footer -->
     <div class="text-center">
         <button type="button" class="btnFooter rounded-circle shadow p-3 mb-5 bg-white rounded border border-white"><i
-                class="fas fa-location-arrow"></i></button>
-        <div class="footer"></div>
+                class="fas fa-sync-alt"></i></button>
+        <div class="footer">
+                <i class="fas fa-location-arrow"></i>
+                <h6 class="cajero-texto">Cajero cercano</h6>
+                <i class="fas fa-file-invoice showForm "></i>
+                <h6 class="reportar-texto ">Reportar</h6>
+        </div>
     </div>
     <!-- Modal -->
-    <button class='showForm'>
-
-    </button>
     <div class='overlay'>
-        <form class='slideUpForm'>
+        <div class='slideUpForm'>
             <span class='close'>X</span>
-            <div class="row">
-                <div class="col">
-                    <h6 class="prueba text-center">Ayudanos a mejorar la experiencia de este cajero</h6>
-                </div>
-                <select class="custom-select prueba">
+            <div class="col text-center">
+                <h6 class="prueba text-center">Ayudanos a mejorar la experiencia de este cajero</h6>
+                <select class="custom-select">
                     <option selected>Reportar</option>
                     <option value="1">Fuera de Servicio</option>
                     <option value="2">Sin dinero</option>
@@ -42,17 +42,37 @@
                     <option value="4">No funciona el teclado</option>
                     <option value="5">No ingresa tarjeta</option>
                 </select>
-                <h6>Otro reporte</h6>
-                <textarea class='message' placeholder='Your Message' rows='4'></textarea>
-                <div class="col-4">
-                    <video id="video"></video>
-                    <button id="startbutton">Take photo</button>
-                    <canvas id="canvas"></canvas>
-                </div>
-                <input class='send' type='submit' value='Send'>
+                <h6 class="text-center">Otro reporte :</h6>
+                <textarea class='message' placeholder='Tu reporte'></textarea>
             </div>
-        </form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                        <video id="video"></video>
+                        <canvas id="canvas"></canvas>
+                        <div class="center">
+                            <button id="startbutton">Take photo</button>
+                        </div>
+                        <div class="center">
+                            <input class='send' type='submit' value='Send'>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    </div>
+    </div>
+
+    </div>
+
+
 
 
     <!-- jQuery -->
