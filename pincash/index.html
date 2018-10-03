@@ -24,7 +24,9 @@
         <div class="footer"></div>
     </div>
     <!-- Modal -->
-    <button class='showForm'>Reportar</button>
+    <button class='showForm'>
+
+    </button>
     <div class='overlay'>
         <form class='slideUpForm'>
             <span class='close'>X</span>
@@ -42,7 +44,13 @@
                 </select>
                 <h6>Otro reporte</h6>
                 <textarea class='message' placeholder='Your Message' rows='4'></textarea>
+                <div class="col-4">
+                    <video id="video"></video>
+                    <button id="startbutton">Take photo</button>
+                    <canvas id="canvas"></canvas>
+                </div>
                 <input class='send' type='submit' value='Send'>
+            </div>
         </form>
     </div>
 
@@ -58,6 +66,7 @@
         crossorigin="anonymous"></script>
     <!-- Javascript -->
     <script src="./src/js/js.js"></script>
+    <script src="./src/js/photo.js"></script>
 </body>
 
 </html>
