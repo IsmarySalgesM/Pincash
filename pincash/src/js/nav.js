@@ -29,3 +29,8 @@ const addButtonTrigger = (el) => {
 };
 Array.from(document.querySelectorAll('button[data-for]'))
            .forEach(addButtonTrigger); 
+// Close Modal
+document.getElementById('outModal').addEventListener('click', () => {
+    document.getElementById('slideUpForm').style.display = 'none';
+    
+  });

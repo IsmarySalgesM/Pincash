@@ -106,12 +106,6 @@ left: 35%;
 }
 
 /* Modal reclamo */
-/**
- * Configuration.
- */
-/**
- * Buttons.
- */
  .button {
     margin-bottom: 4px;
     padding: 8px 12px;
@@ -126,9 +120,14 @@ left: 35%;
     outline: none;
   }
   
-  .button--success {
-    background: #00A9A9;
-  }
+.button--success {
+background: #00A9A9;
+
+}
+.btnsu{
+position: relative;
+left: 37%;
+}
    /**
    * Popups.
    */
