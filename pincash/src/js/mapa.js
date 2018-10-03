@@ -18,8 +18,14 @@ if (navigator.geolocation) {
     
       // coord = {lat: , lng:position.coords.longitude}
       // Access-Control-Allow-Origin: *
-      // fetch(`https://places.demo.api.here.com/places/v1/discover/explore?at=${position.coords.latitude}%2C${position.coords.longitude}&cat=atm-bank-exchange&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
-      // .then(res => res.json()).then(result => this.setState({ points: [...this.state.points, result.results.items]}))
+      fetch(`https://places.demo.api.here.com/places/v1/discover/explore?at=${pos.position.latitude}%2C${pos.position.longitude}&cat=atm-bank-exchange&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
+      .then(res => res.json()).then(result => console.log(result))
+
+      fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=servipag&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
+      .then(res => res.json()).then(result => console.log(result))
+
+      // fetch(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=cajero%20grill&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${pos.position.latitude},${pos.position.longitude}&key=AIzaSyCvCk4yatlooMLq8k8nn6RmLufQ3N6M4J4`)
+      // .then(res => res.json()).then(res => console.log(res))
       
       // console.log(data)
     }
