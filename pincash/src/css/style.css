@@ -1,4 +1,8 @@
 /* Footer */
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
 .footer{
 background-color: #F9F9F9;
 height: 50px;
@@ -18,6 +22,12 @@ right:39%;
 .fa-location-arrow:hover { 
     color: #00A9A9;
 }
+.fa-camera{
+color:#52584D;
+}
+.fa-camera:hover{
+    color:#00A9A9;
+    }
 .fa-sync-alt{
 color:#52584D;
 }
@@ -58,7 +68,7 @@ border-radius: 100%;
 width: 60px;
 opacity: 0;
 padding: 10vh 100px;
-background: #52584D;
+background: #F9F9F9;
 display: block;
 margin: 20vh auto;
 transition: all 0.75s ease;
