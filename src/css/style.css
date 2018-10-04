@@ -30,7 +30,7 @@
 .titleWelcome {
     color: white;
     letter-spacing: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rhodium Libre', serif;
 }
 
 
@@ -49,7 +49,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rhodium Libre', serif;
 }
 
 .p {
