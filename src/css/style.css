@@ -82,8 +82,6 @@
     font-size: 17px;
 }
 
-.option {}
-
 .fbBtn {
     padding: 14px;
     width: 38%;
@@ -96,4 +94,9 @@
     width: 38%;
     color: white;
     background-color: #E44747;
+}
+
+.btn-enter {
+    background-image: linear-gradient(#00A9A9, #A7B19F);
+    color: white;
 }

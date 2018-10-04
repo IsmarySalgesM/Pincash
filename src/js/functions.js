@@ -1,7 +1,7 @@
 //Función para registrarse en la aplicación
 function signUp() {
-    const emailValue = email.value;
-    const passwordValue = password.value;
+    const emailValue = signUpEmail.value;
+    const passwordValue = signUpPassword.value;
     firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
         .then(() => {
             alert('Usuario registrado con éxito.');
@@ -24,8 +24,8 @@ function signUp() {
 
 //Función para entrar a la aplicación por usuarios registrados
 function signIn() {
-    const emailValue = email.value;
-    const passwordValue = password.value;
+    const emailValue = signInEmail.value;
+    const passwordValue = signInPassword.value;
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(() => {})
         .catch((error) => {
@@ -36,7 +36,7 @@ function signIn() {
                 alert('Usuario no registrado.')
             }
             if (error.code === 'auth/invalid-email') {
-                alert('Tienes que poner un email.')
+                alert('Tienes que poner un email válido.')
             }
         });
 }
@@ -45,11 +45,6 @@ function signIn() {
 function logOut() {
     firebase.auth().signOut()
         .then(() => {
-            articlesDisplay.style.display = "none";
-            professionalSupportDisplay.style.display = "none";
-            talksDisplay.style.display = "none";
-            complaintsDisplay.style.display = "none";
-            wallDisplay.style.display = "none";
             alert('¡Adiós, nos vemos pronto!');
         })
         .catch();
