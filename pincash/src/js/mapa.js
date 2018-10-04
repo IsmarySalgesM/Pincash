@@ -7,7 +7,7 @@ if (navigator.geolocation) {
     let pos = {
       position: position.coords
     }
-
+    console.log(pos)
     function moveMapToBerlin(map) {
     
 
@@ -22,6 +22,8 @@ if (navigator.geolocation) {
       .then(res => res.json()).then(result => console.log(result))
 
       fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=servipag&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
+      .then(res => res.json()).then(result => console.log(result))
+      fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=pizza&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
       .then(res => res.json()).then(result => console.log(result))
 
       // fetch(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=cajero%20grill&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${pos.position.latitude},${pos.position.longitude}&key=AIzaSyCvCk4yatlooMLq8k8nn6RmLufQ3N6M4J4`)
@@ -59,6 +61,32 @@ if (navigator.geolocation) {
       });
       
     }
+    function addToMap(map, logEventServipag) {
+     let servipag = fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=servipag&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`).then(res => res.json()).then(result => result.results.items)
+      servipag.then(e => {
+        for (let i = 0; i < e.length; i++) {
+          // var svgMarkup = './../img/j.png';
+    
+          // Add the first marker
+          // var bearsIcon = new H.map.Icon(
+          //   svgMarkup.replace('${FILL}', 'blue').replace('${STROKE}', 'red')),
+          // bearsMarker = new H.map.Marker({ lat: e[i].latitude, lng: e[i].longitude },
+          //     {icon: bearsIcon});
+              var imageMarker = new H.map.Marker(new H.geo.Point( e[i].position[0],e[i].position[1] ), {
+                icon: new H.map.Icon('../img/j.png')
+              });
+              // var image = new H.map.Marker(new H.geo.Point( e[i].position[0],e[i].position[1] ), {
+              //   icon: new H.map.Icon('../img/j.png')
+              // });
+          map.addObject(imageMarker);
+          imageMarker.addEventListener('tap', logEventServipag)
+          imageMarker.setData(e[i]);
+          // var parisMarker = new H.map.Marker({ lat: e[i].latitude, lng: e[i].longitude });
+          // map.addObject(parisMarker);
+        }
+      }) 
+      
+    }
     function logEvent(e) {
       let data = e.target.getData();
       console.log( e.target.getData())
@@ -69,6 +97,19 @@ if (navigator.geolocation) {
       direccion.innerHTML = data.address;
       
       span.addEventListener('click' , () => modal.style.display = "none")
+      fetch(data.url).then(e => e.json()).then(e => console.log(e))
+    }
+    function logEventServipag(e) {
+      let data = e.target.getData();
+      console.log( e.target.getData())
+      fetch(data.category.href).then(e => e.json()).then(e => console.log(e))
+      // var modal = document.getElementById('myModal');
+      // modal.style.display = "block";
+      // var direccion = document.getElementById('direccion');
+      // var span = document.getElementById('spane');
+      // direccion.innerHTML = data.address;
+      
+      // span.addEventListener('click' , () => modal.style.display = "none")
 
     }
       // var entry = document.createElement('li');
@@ -108,7 +149,8 @@ if (navigator.geolocation) {
 
     // Now use the map as required...
     moveMapToBerlin(map);
-    addMarkersToMap(map, logEvent)
+    addMarkersToMap(map, logEvent);
+    addToMap(map,logEventServipag);
   })
 
 }
