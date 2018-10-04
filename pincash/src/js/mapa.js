@@ -26,8 +26,10 @@ if (navigator.geolocation) {
         .then(res => res.json()).then(result => console.log(result))
       fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=pizza&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
         .then(res => res.json()).then(result => console.log(result))
-      fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=multicaja&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
+      fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=mcdonalds&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
         .then(res => res.json()).then(result => console.log(result))
+        // fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=CajaVecina&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
+        // .then(res => res.json()).then(result => console.log(result))
 
       // fetch(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=cajero%20grill&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${pos.position.latitude},${pos.position.longitude}&key=AIzaSyCvCk4yatlooMLq8k8nn6RmLufQ3N6M4J4`)
       // .then(res => res.json()).then(res => console.log(res))
@@ -69,6 +71,20 @@ if (navigator.geolocation) {
       })
 
     }
+    function mcdonaldsMarker(map,logEventMcdonalds){
+      let mcdonalds= fetch(`https://places.demo.api.here.com/places/v1/discover/search?at=${pos.position.latitude}%2C${pos.position.longitude}&q=mcdonalds&app_id=FEvccZMTuKIuT1WwAa1S&app_code=FhLrXpED1CV2tBJ-qymxcQ`)
+        .then(res => res.json()).then(result => result.results.items)
+      mcdonalds.then(e => {
+        for (let i = 0; i < e.length; i++) {
+          var imageMarker = new H.map.Marker(new H.geo.Point(e[i].position[0], e[i].position[1]), {
+            icon: new H.map.Icon('../img/mcdona.png')
+          });
+          map.addObject(imageMarker);
+          imageMarker.addEventListener('tap', logEventMcdonalds)
+          imageMarker.setData(e[i]);
+        }
+      })
+    }
     function logEvent(e) {
       let data = e.target.getData();
       console.log(e.target.getData())
@@ -86,6 +102,9 @@ if (navigator.geolocation) {
       let data = e.target.getData();
       console.log(e.target.getData())
       fetch(data.category.href).then(e => e.json()).then(e => console.log(e))
+    }
+    function logEventMcdonalds(e){
+
     }
 
     /**
@@ -116,6 +135,7 @@ if (navigator.geolocation) {
     moveMapToBerlin(map);
     addMarkersToMap(map, logEvent);
     addToMap(map, logEventServipag);
+    mcdonaldsMarker(map,logEventMcdonalds)
   })
 
 }
