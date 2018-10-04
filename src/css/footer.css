@@ -9,34 +9,35 @@ height: 50px;
 }
 
 .btnFooter{
-position: relative;
-top: 70px;
+  position: relative;
+  top: 70px;
+  left:30px;
+  background-color: white;
+
+}
+.fas{
+  width: 15px;
+}
+.btnFooterMap{
+  position: relative;
+  left: 140px;
+  bottom: 220px;
 background-color: white;
-   
+
 }
-.fa-location-arrow{
-position:relative;
-color :#52584D;
-right:39%;
-}
-.fa-location-arrow:hover { 
-    color: #00A9A9;
-}
+
 .fa-camera{
 color:#52584D;
 }
 .fa-camera:hover{
-    color:#00A9A9;
-    }
+color:#00A9A9;
+}
 .fa-sync-alt{
 color:#52584D;
 }
 
 .fa-file-invoice{
-position:relative;
 color :#52584D;
-margin-top: -4%;
-left:39%;
 }
 .reportar-texto{
 position:relative;
@@ -63,13 +64,14 @@ display: block;
 
 .slideUpForm {
 position: relative;
+
 width: 0px;
 border-radius: 100%;
 width: 60px;
 opacity: 0;
 padding: 10vh 100px;
 background: #F9F9F9;
-display: block;
+display: none;
 margin: 20vh auto;
 transition: all 0.75s ease;
 z-index: 999;
@@ -83,11 +85,11 @@ border-radius: 0;
 }
 .slideUpForm input,.slideUpForm textarea,.custom-select {
 width: 50%;
-margin: 0.5em;
-padding: 0.5em;
-border: solid 2px #52584D;
+border: solid 2px #00A9A9;
 outline: none;
 }
+
+
 .prueba{
 margin: 0.5em;
 padding: 0.5em;
@@ -115,6 +117,14 @@ position: relative;
 left: 35%;   
 }
 
+#canvas{
+  margin-top: 10%;
+}
+#video{
+  margin-top: 10%;
+}
+
+
 /* Modal reclamo */
  .button {
     margin-bottom: 4px;
@@ -132,11 +142,15 @@ left: 35%;
   
 .button--success {
 background: #00A9A9;
-
 }
+.reporteText{
+  width: 40%;
+}
+
 .btnsu{
-position: relative;
-left: 37%;
+  margin-top: 5%;
+  position:absolute;
+  left:20%;
 }
    /**
    * Popups.

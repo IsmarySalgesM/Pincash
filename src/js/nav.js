@@ -12,14 +12,20 @@ function showForm() {
   
   $('.showForm').click(function () {
     showForm();
+    document.getElementById('slideUp').style.display= 'block';
   });
   
   $('.close').click(function () {
     hideForm();
+    
   });
 
 
 // Modal Reclamo
+function cerrar(){
+  // document.getElementById('slideUp').style.display= 'none';
+  location = './mapa.html'
+}
 
 const addButtonTrigger = (el) => {
 	el.addEventListener('click', () => {
