@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/DanitzaV/Pincash/issues"
   },
-  "homepage": "https://github.com/DanitzaV/Pincash#readme"
+  "homepage": "https://github.com/DanitzaV/Pincash#readme",
+  "engines": {
+    "node": "8.11.1"
+  }
 }
+
