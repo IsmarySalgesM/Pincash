@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
+    <link rel="stylesheet" href="../css/ruta.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div id="map" style="width: 100%; height: 400px; background: grey" />
+    <div id="map" style="width: 100%; height: 400px; background: grey" ></div>
     <div id="contenedor"></div>
+    <button id="mapabtn">volver a mapa</button>
+    <div id="mapa" style="position:absolute; width:49%; height:100%; background:grey" ></div>
+    <div id="panel" style="position:absolute; width:49%; left:51%; height:100%; background:inherit" ></div>
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -19,7 +23,7 @@
           <span class="close" id="spane">&times;</span>
           <h1>Cajero </h1>
           <p id="direccion"></p>
-            
+            <button id="btnruta">ruta</button>
         </div>
       
       </div>
