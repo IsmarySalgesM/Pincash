@@ -1,0 +1,56 @@
+/* Sección de la cortina cuando se carga la página */
+*,*:after, *:before{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#courtainContainer{
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#00A9A9, #A7B19F);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.courtain-enter {
+  opacity: 0.01;
+}
+
+.courtain-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.courtain-leave {
+  opacity: 1;
+}
+
+.courtain-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.App-logo {
+  width: 103%;
+  margin-top: 7rem;
+}
+
+.profile {
+  width: 50%;
+}
+
+.App-logo-ini {
+  width: 110%;
+  margin-top: 11rem;
+}
+
+.splashTitle {
+  color: white;
+  margin-top: 3rem;
+  font-family: 'Rhodium Libre', serif;
+  letter-spacing: 10px;
+}
