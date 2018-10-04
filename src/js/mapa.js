@@ -161,6 +161,7 @@ function ruta(e) {
     //  location = '../html/ruta.html';
     document.getElementById('map').style.display = "none";
     document.getElementById('mapabtn').style.display = "block";
+    document.getElementById('panel').style.display = "block";
     document.getElementById('mapa').style.display = "block"
     let btnmapa = document.getElementById('mapabtn');
     btnmapa.addEventListener('click', () => {
