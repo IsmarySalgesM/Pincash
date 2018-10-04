@@ -1,0 +1,99 @@
+/* Sección de la cortina cuando se carga la página */
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#courtainContainer {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#00A9A9, #A7B19F);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+    z-index: 10000;
+}
+
+.whiteLogo {
+    width: 7rem;
+}
+
+.titleWelcome {
+    color: white;
+    letter-spacing: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*Sección login*/
+
+.topRow {
+    margin-top: 12rem;
+}
+
+.logocolor {
+    width: 7rem;
+}
+
+.titleLogin {
+    background: -webkit-linear-gradient(#00A9A9, #A7B19F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.p {
+    font-family: 'arial';
+}
+
+.btn {
+    border: 0 none;
+    border-radius: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.regist {
+    background-color: white;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.noAcc {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0%;
+    margin-top: 1rem;
+}
+
+.mailLogin {
+    width: 87%;
+    background-image: linear-gradient(#00A9A9, #A7B19F);
+    color: white;
+    padding: 1rem;
+    font-size: 17px;
+}
+
+.option {}
+
+.fbBtn {
+    padding: 14px;
+    width: 38%;
+    color: white;
+    background-color: #164F8E;
+}
+
+.googleBtn {
+    padding: 14px;
+    width: 38%;
+    color: white;
+    background-color: #E44747;
+}
