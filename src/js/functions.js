@@ -1,3 +1,16 @@
+//Función para reconocer si hay un usuario conectado e ingresar al perfil de éste
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        //Si nos logeamos, entramos al perfil del usuario
+        login.style.display = 'none';
+        start.style.display = 'block';
+    } else {
+        //Si no logeamos, nos mantenemos en la página de sign in o sign up
+        login.style.display = 'block';
+        start.style.display = 'none';
+    }
+});
+
 //Función para registrarse en la aplicación
 function signUp() {
     const emailValue = signUpEmail.value;

@@ -1,11 +1,9 @@
 // Timeout de la cortina
-window.onload = () => {
-    setTimeout(function() {
-        const courtainContainer = document.getElementById('courtainContainer');
-        courtainContainer.style.visibility = 'hidden';
-        courtainContainer.style.opacity = '0';
-    }, 1000);
-};
+setTimeout(function() {
+    const courtainContainer = document.getElementById('courtainContainer');
+    courtainContainer.style.visibility = 'hidden';
+    courtainContainer.style.opacity = '0';
+}, 1000);
 
 // Diseño de la cortina
 courtainContainer.innerHTML =
@@ -61,7 +59,7 @@ login.innerHTML = `
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-enter" onclick="signUp()">Registrar</button>
+                        <button type="button" class="btn btn-enter" onclick="signUp()" data-dismiss="modal">Registrar</button>
                     </div>
                 </div>
             </div>
@@ -92,7 +90,7 @@ login.innerHTML = `
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-enter" onclick="signIn()">Entrar</button>
+                                <button type="button" class="btn btn-enter" onclick="signIn()" data-dismiss="modal">Entrar</button>
                             </div>
                         </div>
                     </div>
@@ -111,5 +109,27 @@ login.innerHTML = `
             </div>
         </div>
     </div>
+</div>
+`;
+
+// Página mapa
+start.innerHTML = `
+<div class="row cash">
+  <div class="col-2 p-0">
+    <i class="fas fa-bell"></i>
+  </div>
+  <div class="col-10">
+    <p class="firstTitle p-4 m-0">LUGARES CON EFECTIVO</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div id="mapa"></div>
+  </div>
+</div>
+<div class="row" id="footer">
+  <div class="col-12 text-center">
+    <button type="button" class="btn btn-footer p-4" onclick="logOut()">Salir</button>
+  </div>
 </div>
 `;

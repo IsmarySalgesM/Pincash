@@ -100,3 +100,38 @@
     background-image: linear-gradient(#00A9A9, #A7B19F);
     color: white;
 }
+
+.modal-header {
+    background-image: linear-gradient(#00A9A9, #A7B19F);
+    color: white;
+}
+
+
+/*Página*/
+
+.cash {
+    background-image: linear-gradient(#00A9A9, #A7B19F);
+    color: white;
+}
+
+.fa-bell {
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+    background-color: #A7B19F;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn-footer {
+    background-color: #A7B19F;
+    color: white;
+}
+
+#start {}
+
+#login {}
